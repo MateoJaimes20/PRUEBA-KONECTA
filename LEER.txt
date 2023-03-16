@@ -1,0 +1,4 @@
+El programa esta hecho en Spring-Boot como  BACK-END,enfocado en el modelo MVC, donde el FRONt-En, escencialmente es Thymeleaf, la base de datos se llama crud_konecta, con el controlador MySQL. Para iniciar el proyecto, el programa esta inicializado en el puerto 8090, y con la extencion Localhost:8090/index.
+
+Te dejo los Scripts de las bases de datos en la carpeta bd.
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>konecta</title>
+</head>
+<body>
+    <div>
+        <br>
+        <div class="container">
+            <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                <h1>Nueva solicitud</h1>
+                <form th:action="@{/solicitudes}" th:object="${solicitud}" method="post">
+                    <div class="form-group">
+                        <label for="codigo" class="form-label"></label>
+                        <input type="text" class="form-control" name="codigo" th:field="*{codigo}" placeholder="Codigo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion" class="form-label"></label>
+                        <input type="text" class="form-control" name="descripcion" placeholder="Descripcion" th:field="*{descripcion}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resumen" class="form-label"></label>
+                        <input type="text" class="form-control" name="resumen" placeholder="Resumen" th:field="*{resumen}" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                    <br>
+                </form>
+                <a type="button" class="btn btn-danger" th:href="@{http://localhost:8090/konecta/empleados}">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.ofg">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>konecta</title>
+</head>
+<body>
+    <div>
+        <br>
+        <div class="container">
+            <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+                <h1>Registro</h1>
+                <form th:action="@{/empleados}" th:object="${empleado}" method="post">
+                    <div class="form-group">
+                        <label for="fecha" class="form-label">Fecha de Ingreso</label>
+                        <input type="date" class="form-control" name="fecha" th:field="*{fechaIngreso}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre" class="form-label"></label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" th:field="*{nombre}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="salario" class="form-label"></label>
+                        <input type="number" class="form-control" name="salario" placeholder="Salario" th:field="*{salario}" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                    <br>
+                </form>
+                <a type="button" class="btn btn-danger" th:href="@{http://localhost:8090/konecta/empleados}">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
